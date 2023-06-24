@@ -1,6 +1,7 @@
 # Namespaces-Modules-decoratos
 
 Namespaces:
+
 Los Namespaces en TypeScript son una forma de organizar y agrupar código relacionado en un ámbito específico. Permiten evitar colisiones de nombres y proporcionan un mecanismo para estructurar y modularizar tu código.
 
 Aquí tienes un ejemplo de cómo crear un Namespace en TypeScript:
@@ -59,7 +60,8 @@ En este ejemplo, hemos dividido el namespace `MyNamespace` en dos archivos: `myN
 
 Utilizar namespaces en múltiples archivos puede ayudar a mantener el código más organizado y modular, especialmente en proyectos más grandes. Sin embargo, es importante tener en cuenta que los modules (módulos) son una opción más recomendada y moderna para organizar el código en TypeScript, ya que ofrecen una mayor flexibilidad y soporte para sistemas de módulos estándar como CommonJS o ES Modules.
 
-2. Modules:
+Modules:
+
 Los Modules en TypeScript son una forma más moderna de organizar y compartir código. A diferencia de los Namespaces, los Modules se basan en el sistema de módulos de JavaScript (CommonJS o ES Modules) y proporcionan una forma más robusta y flexible de trabajar con módulos.
 
 Aquí tienes un ejemplo de cómo crear un Module en TypeScript:
@@ -86,7 +88,8 @@ sayHello(person); // Hello, John! You are 25 years old.
 
 En este ejemplo, hemos creado un archivo `myModule.ts` que contiene una interfaz `Person` y una función `sayHello`. Utilizamos la palabra clave `export` para exportar estas entidades y hacerlas accesibles desde otros archivos. Luego, en el archivo `main.ts`, importamos las entidades necesarias desde el módulo y las utilizamos.
 
-3. Decorators:
+Decorators:
+
 Los Decorators en TypeScript son una característica experimental que permite modificar o extender el comportamiento de una clase, método, propiedad o parámetro de función. Los decoradores se aplican utilizando la sintaxis `@decorator` justo antes de la declaración de la entidad a la que se desea aplicar.
 
 Aquí tienes un ejemplo de cómo utilizar un Decorator en TypeScript:
