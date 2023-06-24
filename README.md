@@ -1,6 +1,6 @@
 # Namespaces-Modules-decoratos
 
-1. Namespaces:
+Namespaces:
 Los Namespaces en TypeScript son una forma de organizar y agrupar código relacionado en un ámbito específico. Permiten evitar colisiones de nombres y proporcionan un mecanismo para estructurar y modularizar tu código.
 
 Aquí tienes un ejemplo de cómo crear un Namespace en TypeScript:
