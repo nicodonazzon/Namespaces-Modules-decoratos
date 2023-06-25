@@ -64,7 +64,7 @@ Modules:
 
 Los Modules en TypeScript son una forma más moderna de organizar y compartir código. A diferencia de los Namespaces, los Modules se basan en el sistema de módulos de JavaScript (CommonJS o ES Modules) y proporcionan una forma más robusta y flexible de trabajar con módulos.
 
-Aquí tienes un ejemplo de cómo crear un Module en TypeScript:
+Aquí tienes un ejemplo de cómo crear un Module en TypeScript basada en ES Modules:
 
 ```typescript
 // myModule.ts
@@ -87,6 +87,38 @@ sayHello(person); // Hello, John! You are 25 years old.
 ```
 
 En este ejemplo, hemos creado un archivo `myModule.ts` que contiene una interfaz `Person` y una función `sayHello`. Utilizamos la palabra clave `export` para exportar estas entidades y hacerlas accesibles desde otros archivos. Luego, en el archivo `main.ts`, importamos las entidades necesarias desde el módulo y las utilizamos.
+
+Para utilizar el sistema de módulos ES Modules en TypeScript, también necesitarás ajustar tu archivo `tsconfig.json` y establecer la opción `"module": "es6"`.
+
+Otro ejemplo pero utilizando CommonJS:
+
+```javascript
+// myModule.js
+exports.Person = function(name, age) {
+  this.name = name;
+  this.age = age;
+};
+
+exports.sayHello = function(person) {
+  console.log("Hello, " + person.name + "! You are " + person.age + " years old.");
+};
+```
+
+En CommonJS, en lugar de utilizar las palabras clave `export` e `import`, se utilizan las asignaciones a `exports` para exportar y `require` para importar.
+
+Para utilizar este módulo en otro archivo con CommonJS, puedes hacer lo siguiente:
+
+```javascript
+const myModule = require("./myModule");
+
+const person = new myModule.Person("John", 25);
+
+myModule.sayHello(person);
+```
+
+En este ejemplo, utilizamos `require` para importar el módulo `myModule.js` desde el archivo actual. Luego, creamos un objeto `person` utilizando la función `Person` del módulo y llamamos a la función `sayHello` pasándole ese objeto.
+
+Recuerda que para utilizar el sistema de módulos CommonJS en TypeScript, también necesitarás ajustar tu archivo `tsconfig.json` y establecer la opción `"module": "commonjs"`.
 
 Decorators:
 
